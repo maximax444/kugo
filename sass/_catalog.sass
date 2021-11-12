@@ -2,11 +2,16 @@
     border: 1.5px solid #EAEBED
     border-radius: 10px
     width: 255px
+    position: relative
     &__img
+        display: block
         height: 230px
-        width: 100%
+        width: calc(100% + 2px)
+        margin-left: -1px
+        margin-top: -1px
         background: #F0F1F5
         overflow: hidden
+        border-radius: 10px 10px 0 0
         &-wrap
             height: 230px
         &-block
@@ -17,3 +22,178 @@
             img
                 max-width: 100%
                 max-height: 100%
+    &__cont
+        padding: 20px 24px
+    &__new
+        position: absolute
+        top: 10px
+        left: 10px
+        font-weight: 500
+        font-size: 12px
+        line-height: 17px
+        color: #FFFFFF
+        padding: 4px 8px
+        background: #75D14A
+        border-radius: 5px
+        z-index: 2
+    &__hit
+        position: absolute
+        top: 10px
+        left: 10px
+        font-weight: 500
+        font-size: 12px
+        line-height: 17px
+        color: #FFFFFF
+        padding: 4px 9px
+        text-transform: uppercase
+        background: #EE685F
+        border-radius: 5px
+        z-index: 2
+    &__title
+        font-weight: 600
+        font-size: 18px
+        line-height: 26px
+        margin-bottom: 20px
+        margin-top: 0
+        color: #282739
+        display: block
+        text-decoration: none
+        &:hover
+            color: #6F73EE
+    &__attr
+        display: flex
+        flex-wrap: wrap
+        &-block
+            width: 50%
+            display: flex
+            align-items: center
+            font-size: 14px
+            line-height: 16px
+            color: #5D6C7B
+            margin-bottom: 17px
+        &-img
+            display: flex
+            width: 20px
+            margin-right: 8px
+    &__bottom
+        padding-top: 8px
+        padding-bottom: 16px
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__price
+        font-weight: 600
+        font-size: 20px
+        line-height: 29px
+        color: #282739
+        span
+            display: block
+            font-weight: 500
+            font-size: 12px
+            line-height: 17px
+            text-decoration-line: line-through
+            color: #5D6C7B
+    &__buy
+        width: 40px
+        height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        border: 1.3px solid #EAEBED
+        background-color: transparent
+        cursor: pointer
+        &:hover
+            background: #F4F7FB
+        span
+            width: 20px
+            height: 20px
+            background: url('../img/cart-normal.svg') center no-repeat
+            &:hover
+                background: url('../img/cart-full.svg') center no-repeat
+        &.active
+            span
+                background: url('../img/cart-full.svg') center no-repeat
+    &__wish
+        width: 40px
+        height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: 50%
+        border: 1.3px solid #EAEBED
+        background-color: transparent
+        cursor: pointer
+        &:hover
+            background: #F4F7FB
+        span
+            width: 20px
+            height: 20px
+            background: url('../img/wish-normal.svg') center no-repeat
+            &:hover
+                background: url('../img/wish-full.svg') center no-repeat
+        &.active
+            span
+                background: url('../img/wish-full.svg') center no-repeat
+    &__compare
+        width: 35px
+        height: 35px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: rgba(255, 255, 255, 0.2)
+        backdrop-filter: blur(5px)
+        border: 0
+        padding: 0
+        cursor: pointer
+        position: absolute
+        border-radius: 50%
+        top: 10px
+        right: 10px
+        path
+            transition: all 0.3s
+        &:hover, &.active
+            path
+                fill: #6F73EE
+    &__click
+        display: block
+        width: 100%
+        padding: 10px 20px
+        background: #6F73EE
+        border: 1px solid #6F73EE
+        border-radius: 5px
+        font-size: 12px
+        line-height: 17px
+        text-align: center
+        color: #FFFFFF
+        text-decoration: none
+        &:hover
+            color: #6F73EE
+            background-color: #fff
+    &__arrow
+        background: #FFFFFF
+        width: 40px
+        height: 40px
+        display: none
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 50%
+        margin-top: -20px
+        border-radius: 50%
+        cursor: pointer
+        transition: all 0.3s
+        path
+            transition: all 0.3s
+        &:hover
+            background: #6F73EE
+            box-shadow: 0px 15px 15px rgba(111, 115, 238, 0.2)
+            path
+                fill: #fff
+    &__prev
+        left: 12px
+    &__next
+        right: 12px
+    &__img:hover
+        .card__arrow
+            display: flex
