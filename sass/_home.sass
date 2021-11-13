@@ -1058,3 +1058,394 @@
                         margin-right: 5px
 .slick-track
     transition: all 0.3s
+@media(max-width: 1199px)
+    .home
+        &-main
+            &__all
+                padding-left: 7px
+                padding-right: 7px
+            &__right
+                max-width: 40%
+            &__test, &__text
+                display: none
+            &__img
+                max-width: 100%
+                img
+                    max-width: 100%
+        &-products, &-most
+            &__wrap
+                grid-template-columns: repeat(3, 1fr)
+                grid-gap: 30px 104px
+        &-cats
+            &__wrap
+                grid-template-columns: repeat(3, 1fr)
+        &-banner
+            &__wrap
+                display: block
+            &__block
+                margin-bottom: 10px
+        &-official
+            &__wrap
+                flex-direction: column-reverse
+            &__cont
+                width: 100%
+                max-width: 100%
+                margin-left: 0
+                margin-bottom: 20px
+            &__left
+                max-width: 100%
+        &-features
+            &__grid
+                grid-template-columns: repeat(2, 1fr)
+        &-videos, &-blog
+            &__prev
+                left: 0
+            &__arrow
+                width: 40px
+                height: 40px
+                margin-top: -20px
+                svg
+                    margin-top: 10px
+@media(max-width: 991px)
+    .home
+        &-little
+            &__wrap
+                flex-wrap: wrap
+            &__left
+                margin-bottom: 20px
+        &-products, &-most
+            &__top
+                display: block
+            &__title
+                margin-bottom: 20px
+            &__wrap
+                display: flex
+                flex-wrap: wrap
+                justify-content: space-between
+                grid-gap: 30px
+            &__tabs
+                button
+                    margin-left: 0
+                    margin-right: 5px
+        &-stock
+            &__wrap
+                flex-direction: column-reverse
+            &__cont
+                padding: 40px 15px
+            &__img
+                width: 100%
+                img
+                    max-width: 100%
+        &-video
+            &__img
+                height: auto
+        &-videos
+            .slick-list
+                overflow: hidden
+            .slick-track
+                transition: none
+            &__slider
+                width: 100%
+            &__next
+                top: 130px
+                margin-top: 0
+                right: -6px
+            &__prev
+                top: 130px
+                margin-top: 0
+                left: -6px
+            &__img
+                height: 300px
+            &__play
+                height: 40px
+                width: 40px
+                margin-left: -20px
+                top: 130px
+                img
+                    max-width: 40%
+            &__block
+                margin-right: 0
+                &.slick-current
+                    width: 350px
+                    .home-videos
+                        &__img
+                            height: 300px
+                        &__play
+                            top: 130px
+                            height: 40px
+                            width: 40px
+                            margin-left: -20px
+        &-blog
+            .slick-list
+                overflow: hidden
+            &__slider
+                width: 100%
+            &__next
+                right: -6px
+            &__prev
+                left: -6px
+            &__block
+                margin-right: 0
+@media(max-width: 767px)
+    .home
+        &-little
+            &__left
+                display: block
+                margin-bottom: 0
+            &__block
+                margin-bottom: 10px
+                font-size: 14px
+                line-height: normal
+                span
+                    font-size: 18px
+                    line-height: normal
+        &-cats
+            &__wrap
+                grid-template-columns: repeat(2, 1fr)
+            &__top
+                display: block
+        &-features
+            &__last
+                justify-content: flex-start
+                &-img
+                    width: 50%
+                    img
+                        max-width: 100%
+        &-videos
+            &__top
+                display: block
+            &__all
+                display: inline-block
+@media(max-width: 575px)
+    .home
+        &-little
+            &__wrap
+                position: relative
+            &__left
+                width: 100%
+                display: flex
+                grid-gap: 10px 0
+                flex-wrap: wrap
+            &__block
+                font-size: 12px
+                width: 50%
+                margin-bottom: 0
+                span
+                    font-size: 14px
+            &__ya
+                padding: 5px
+                position: absolute
+                bottom: 0px
+                left: 50%
+                &-img
+                    height: 30px
+                    width: 30px
+                    margin-right: 10px
+                    img
+                        max-width: 30%
+                &-cont
+                    font-size: 9px
+                    line-height: normal
+                    span
+                        margin-top: 0
+                        font-size: 14px
+                        line-height: normal
+        &-main
+            padding-top: 20px
+            padding-bottom: 0px
+            .slick-dots
+                bottom: -15px
+                li
+                    width: auto
+                    height: auto
+                    button
+                        width: 20px
+                        height: 1px
+                        padding: 0
+                        background-color: rgba(#5D6C7B, 0.3)
+                        &::before
+                            display: none
+                    &.slick-active
+                        button
+                            background-color: #6F73EE
+            &__all
+                padding: 15px 7px
+            &__new
+                padding: 3px 7px
+                font-size: 8px
+                line-height: 12px
+                margin-bottom: 10px
+            &__title
+                font-size: 12px
+                line-height: 129.5%
+                margin-bottom: 5px
+                max-width: 165px
+            &__subtitle
+                font-size: 10px
+                line-height: 14px
+                color: #FFFFFF
+                margin-bottom: 0
+            &__link
+                display: none
+            &__nav
+                display: none
+        &-most
+            padding: 40px 0
+        &-products, &-most
+            &__top
+                display: block
+                padding-top: 40px
+                padding-bottom: 20px
+            &__title
+                margin-bottom: 20px
+                margin-top: 0
+                font-size: 24px
+            &__more
+                margin-top: 20px
+            &__wrap
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                grid-gap: 30px
+            .card
+                width: 100%
+            &__tabs
+                flex-wrap: wrap
+                button
+                    padding: 5px 10px
+                    margin-left: 0
+                    margin-right: 5px
+                    margin-bottom: 5px
+        &-cats
+            padding: 40px 0
+            &__wrap
+                grid-template-columns: 1fr
+            &__top
+                margin-bottom: 20px
+            &__more
+                margin-top: 20px
+            &__title
+                font-size: 24px
+                line-height: normal
+        &-banner
+            padding: 40px 0
+            &__block
+                padding: 15px
+                height: auto
+                padding-bottom: 100px
+                &::after
+                    width: 200px
+                    height: 200px
+                    bottom: -100px
+                    right: -100px
+                    top: auto
+            &__img
+                height: auto
+                width: 120px
+                display: flex
+                img
+                    max-width: 100%
+        &-stock
+            &__cont
+                width: 100%
+                padding: 25px 10px
+            &__title
+                font-size: 24px
+                line-height: normal
+                margin-bottom: 20px
+            &__stock
+                margin-bottom: 15px
+        &-official
+            &__wrap
+                padding: 10px
+            &__title
+                font-size: 21px
+                line-height: normal
+            &__text
+                font-size: 14px
+                margin-bottom: 20px
+            &__main
+                padding: 10px
+            &__dop
+                right: 10px
+                bottom: 10px
+        &-features
+            padding: 40px 0
+            &__title
+                font-size: 24px
+                line-height: normal
+                br
+                    display: none
+            &__subtitle
+                font-size: 18px
+                margin-bottom: 20px
+            &__tabs
+                margin-bottom: 30px
+                button
+                    margin: 0 10px
+                    font-size: 14px
+                    padding: 5px 10px
+            &__grid
+                display: block
+            &__block
+                margin-bottom: 20px
+            &__last
+                padding: 20px
+                padding-bottom: 100px
+        &-video
+            &__play
+                width: 50px
+                height: 50px
+                margin-left: -25px
+                margin-top: -25px
+                svg
+                    max-width: 30%
+        &-reviews
+            padding: 40px 0
+            &__title
+                line-height: normal
+                font-size: 24px
+            &__link
+                font-size: 14px
+                margin-bottom: 25px
+        &-faq
+            &__top
+                font-size: 24px
+                line-height: normal
+                margin-bottom: 25px
+            &__title
+                height: auto
+                padding: 8px 0
+                font-size: 14px
+                line-height: normal
+                padding-right: 40px
+            &__cont
+                font-size: 12px
+                line-height: 16px
+        &-videos
+            padding-top: 20px
+            &__title
+                line-height: normal
+                font-size: 24px
+                margin-bottom: 25px
+            &__top
+                margin-bottom: 25px
+            &__img
+                height: 200px
+            &__play
+                top: 80px
+            &__block.slick-current
+                .home-videos
+                    &__play
+                        top: 80px
+                    &__img
+                        height: 200px
+            &__next, &__prev
+                top: 80px
+        &-blog
+            padding: 40px 0
+            padding-top: 60px
+            &__title
+                font-size: 24px
+                line-height: normal
+                margin-bottom: 25px

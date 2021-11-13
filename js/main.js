@@ -9,6 +9,15 @@ $('.header-main__cat').on('click', function () {
     $(this).toggleClass('active');
     $('.header-main__drop').toggleClass('active');
     $('.mob-menu').toggleClass('active');
+    if (window.screen.width < 576) {
+        $('.header-nav').toggleClass('active');
+        if ($('.header-nav').hasClass('active')) {
+            $('body').css('overflow', 'hidden');
+        } else {
+            $('body').css('overflow', 'visible');
+        }
+    }
+
 });
 $('.mob-menu__left a').on({
     mouseenter: function () {
@@ -18,6 +27,11 @@ $('.mob-menu__left a').on({
     mouseleave: function () {
     }
 });
+$('.header-main__cart').on('click', function (e) {
+    e.preventDefault();
+    $('.drop-cart').toggleClass('active');
+});
+
 
 // main slider
 $('.home-main__slider').slick({
@@ -25,7 +39,17 @@ $('.home-main__slider').slick({
     slidesToScroll: 1,
     fade: true,
     arrows: false,
-    dots: false
+    dots: false,
+    responsive: [
+        {
+            breakpoint: 576,
+            settings: {
+                dots: true,
+                adaptiveHeight: true
+            }
+
+        }
+    ]
 });
 $('.home-main__progress').each(function () {
     $(this).find('span').css('width', 34 * $(this).closest('.home-main__nav').find('.home-main__curr').html() / $(this).closest('.home-main__nav').find('.home-main__slides').html());
@@ -91,8 +115,8 @@ $(window).scroll(function () {
     var lineOffset = $(".home-reviews").offset().top;
     console.log(scroll_position);
     console.log(lineOffset);
-    var object_position_left = -300 - (scroll_position - lineOffset);
-    var object_position_left2 = (-300 - (scroll_position - lineOffset)) * 1.2;
+    var object_position_left = -500 - (scroll_position - lineOffset);
+    var object_position_left2 = (-500 - (scroll_position - lineOffset)) * 1.2;
     $(".home-reviews__line1").css({ left: object_position_left2 });
     $(".home-reviews__line2").css({ left: object_position_left });
 });
@@ -108,7 +132,18 @@ $('.home-videos__slider').slick({
     adaptiveHeight: true,
     nextArrow: '.home-videos__next',
     prevArrow: '.home-videos__prev',
-    slide: '.home-videos__block'
+    slide: '.home-videos__block',
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 1,
+                variableWidth: false,
+                infinite: true
+            }
+
+        }
+    ]
 });
 
 //  home-blog slider
@@ -120,7 +155,17 @@ $('.home-blog__slider').slick({
     dots: false,
     nextArrow: '.home-blog__next',
     prevArrow: '.home-blog__prev',
-    slide: '.home-blog__block'
+    slide: '.home-blog__block',
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                infinite: true
+            }
+
+        }
+    ]
 });
 
 //  home-faq accordeon
