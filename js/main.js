@@ -67,7 +67,7 @@ $('.home-main__prev').on('click', function (e) {
 $('.home-features__tabs').on('click', 'button:not(.active)', function () {
     $(this)
         .addClass('active').siblings().removeClass('active')
-        .closest('.home-features').find('.home-features__cont-block').removeClass('active').eq($(this).index()).addClass('active');
+        .closest('.container').find('.home-features__cont-block').removeClass('active').eq($(this).index()).addClass('active');
 });
 
 // home products sliders
@@ -172,4 +172,34 @@ $('.home-blog__slider').slick({
 $('.home-faq__title').on('click', function () {
     $(this).toggleClass('active');
     $(this).closest('.home-faq__block').find('.home-faq__cont').toggleClass('active');
+});
+
+
+
+// service work
+$('.service-work__tabs').on('click', 'button:not(.active)', function () {
+    $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('.service-work').find('.service-work__cont-block').removeClass('active').eq($(this).index()).addClass('active');
+});
+// service team
+$('.service-team__slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    infinite: false,
+    dots: false,
+    nextArrow: '.home-blog__next',
+    prevArrow: '.home-blog__prev',
+    slide: '.service-team__block',
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                infinite: true
+            }
+
+        }
+    ]
 });
