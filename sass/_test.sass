@@ -1,0 +1,307 @@
+.test
+    &-last
+        padding-bottom: 100px
+        &__all
+            background: #F4F7FB
+            border-radius: 10px
+        &__wrap
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &__img
+            height: 445px
+            display: flex
+            justify-content: center
+            align-items: flex-end
+            img
+                max-width: 100%
+        &__title
+            margin: 0
+            margin-bottom: 40px
+            max-width: 615px
+            font-weight: 600
+            font-size: 35px
+            line-height: 51px
+            text-transform: uppercase
+            color: #282739
+        &__subtitle
+            font-weight: 500
+            font-size: 16px
+            line-height: 23px
+            color: #282739
+            margin-bottom: 20px
+        &__top
+            width: 540px
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            margin-bottom: 20px
+        form
+            input[type='tel']
+                width: 262px
+                padding: 15px 25px
+                background: #FFFFFF
+                border: 1px solid #EAEBED
+                border-radius: 5px
+                font-size: 16px
+                line-height: 23px
+                letter-spacing: 0.155em
+                color: #5D6C7B
+                transition: all 0.3s
+                &:focus
+                    outline: none
+                    border: 1px solid #6F73EE
+            button
+                width: 258px
+                padding: 15px 15px
+                text-align: center
+    &-info
+        padding-top: 100px
+        &__wrap
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &__cont
+            width: 645px
+        &__title
+            margin: 0
+            margin-bottom: 30px
+            font-weight: 600
+            font-size: 35px
+            line-height: 51px
+            text-transform: uppercase
+            color: #282739
+        &__subtitle
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            margin-bottom: 18px
+            color: #282739
+        &__list
+            margin: 0
+            padding: 0
+            list-style-type: none
+            li
+                margin-bottom: 10px
+                padding-left: 32px
+                position: relative
+                font-size: 18px
+                line-height: 26px
+                color: #282739
+                span
+                    font-weight: 500
+                &::before
+                    content: ""
+                    display: block
+                    width: 22px
+                    height: 22px
+                    top: 1px
+                    left: 0
+                    position: absolute
+                    background: url('../img/test/test-info-icon.svg') center no-repeat
+        &__img
+            width: calc((100vw - 1110px)/2 + (1110px - 700px))
+            height: 550px
+            &_right
+                margin-right: calc(((100vw - 1110px)/2 - 30px) * (-1))
+            &_left
+                margin-left: calc(((100vw - 1110px)/2 - 30px) * (-1))
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                border-radius: 10px
+    &-main
+        &__all
+            padding: 56px 0
+            border-radius: 10px
+            position: relative
+            overflow: hidden
+            background-repeat: no-repeat
+            background-position: center center
+            &::after
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: linear-gradient(73.21deg, #6F73EE 17.37%, rgba(111, 115, 238, 0) 67.02%)
+        &__wrap
+            position: relative
+            z-index: 2
+        &__addr
+            margin-bottom: 20px
+            display: flex
+            align-items: center
+            font-weight: 500
+            font-size: 12px
+            line-height: 17px
+            color: #FFFFFF
+            span
+                opacity: 0.7
+                padding-left: 10px
+            img
+                margin-right: 8px
+                margin-bottom: 2px
+        &__title
+            max-width: 615px
+            margin-top: 0
+            margin-bottom: 7px
+            font-weight: 600
+            font-size: 35px
+            line-height: 51px
+            text-transform: uppercase
+            color: #FFFFFF
+        &__subtitle
+            font-size: 20px
+            line-height: 29px
+            margin-bottom: 28px
+            color: #FFFFFF
+        &__bottom
+            display: flex
+            align-items: center
+            grid-gap: 35px
+            margin-bottom: 38px
+        &__block
+            display: flex
+            align-items: center
+            span
+                max-width: 149px
+                font-weight: 500
+                font-size: 14px
+                line-height: 18px
+                color: #FFFFFF
+        &__icon
+            width: 40px
+            height: 40px
+            margin-right: 15px
+            background: rgba(#FFFFFF, 0.2)
+            border-radius: 5px
+            display: flex
+            justify-content: center
+            align-items: center
+        &__btn
+            display: inline-block
+            padding: 15px 40px
+            background: #FFFFFF
+            border: 1px solid #FFFFFF
+            border-radius: 5px
+            font-size: 16px
+            line-height: 23px
+            color: #6F73EE
+            text-decoration: none
+            &:hover
+                color: #fff
+                background-color: transparent
+@media(max-width: 1199px)
+    .test
+        &-info
+            &__img
+                height: 400px
+                &_left
+                    padding-right: 10px
+@media(max-width: 991px)
+    .test
+        &-info
+            &__cont
+                width: 100%
+            &__wrap
+                display: block
+                &_reverce
+                    display: flex
+                    flex-direction: column-reverse
+            &__img
+                margin: 0
+                width: 100%
+                height: auto
+                margin-top: 25px
+@media(max-width: 767px)
+    .test
+        &-main
+            &__all
+                background-position: 80% center
+                &::after
+                    background: linear-gradient(73.21deg, #6F73EE 37.37%, rgba(111, 115, 238, 0) 87.02%)
+        &-last
+            &__wrap
+                display: block
+                padding-top: 30px
+            &__img
+                max-width: 100%
+                height: auto
+@media(max-width: 575px)
+    .test
+        &-main
+            &__all
+                padding: 15px 0
+                &::after
+                    background: linear-gradient(73.21deg, #6F73EE 45.37%, rgba(111, 115, 238, 0) 97.02%)
+            &__addr
+                display: none
+            &__title
+                font-size: 14px
+                line-height: normal
+                max-width: 250px
+            &__subtitle
+                font-size: 10px
+                line-height: normal
+                margin-bottom: 10px
+            &__bottom
+                display: block
+                margin-bottom: 10px
+            &__block
+                margin-bottom: 5px
+                span
+                    font-size: 11px
+                    line-height: normal
+            &__icon
+                width: 20px
+                height: 20px
+                margin-right: 5px
+                img
+                    max-width: 60%
+            &__btn
+                padding: 8px 15px
+                text-align: center
+                width: 100%
+        &-last
+            padding-bottom: 40px
+            &__wrap
+                padding-top: 20px
+            &__title
+                font-size: 22px
+                line-height: normal
+                margin-bottom: 20px
+            &__subtitle
+                font-size: 14px
+                line-height: normal
+            &__top
+                display: block
+                width: auto
+            form
+                input[type="tel"]
+                    display: block
+                    margin-bottom: 10px
+                    width: 100%
+                button
+                    width: 100%
+                    text-align: center
+        &-info
+            padding-top: 40px
+            &__title
+                font-size: 19px
+                line-height: normal
+                margin-bottom: 15px
+                br
+                    display: none
+            &__subtitle
+                font-size: 16px
+                margin-bottom: 10px
+            &__list
+                li
+                    font-size: 14px
+                    line-height: normal
+                    margin-bottom: 6px
+            &__img
+                margin-top: 15px

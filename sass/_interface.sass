@@ -8,6 +8,8 @@
     .container
         width: 980px
         margin: auto
+    .container_big
+        padding: 0 5px
 @media (max-width: 991px)
     .container
         width: 740px
@@ -105,6 +107,39 @@
         line-height: 51px
         text-transform: uppercase
         color: #FFFFFF
+.checkbox
+    display: flex
+    align-items: flex-start
+    position: relative
+    input
+        position: absolute
+        top: 0
+        left: 0
+        padding: 0
+        opacity: 0
+        overflow: hidden
+        height: 0
+        width: 0
+        margin: 0
+    &__box
+        width: 16px
+        height: 16px
+        background: #FFFFFF
+        border-radius: 2px
+        margin-top: 3px
+        margin-right: 12px
+    &__text
+        width: calc(100% - 28px)
+        max-width: 310px
+        font-size: 12px
+        line-height: 14px
+        color: #282739
+        a
+            color: #282739
+            &:hover
+                color: #6F73EE
+    input:checked + .checkbox__box
+        background: #FFFFFF url('../img/checkbox.svg') center no-repeat
 @media(max-width: 1199px)
     .page-top
         &__title

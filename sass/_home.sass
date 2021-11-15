@@ -1007,6 +1007,7 @@
                 z-index: 3
                 background: url('../img/home/home-main-line.svg') center no-repeat
     &-little
+        overflow: hidden
         &__wrap
             display: flex
             justify-content: space-between
@@ -1216,6 +1217,9 @@
                 display: block
             &__all
                 display: inline-block
+        &-most__title
+            br
+                display: none
 @media(max-width: 575px)
     .home
         &-little
@@ -1291,6 +1295,8 @@
                 display: none
         &-most
             padding: 40px 0
+            &__title
+                line-height: normal
         &-products, &-most
             &__top
                 display: block
