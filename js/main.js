@@ -107,19 +107,22 @@ $('.card__wish').on('click', function () {
 $('.card__buy').on('click', function () {
     $(this).addClass('active');
 });
-
+console.log($(".home-reviews").length != 0);
 // home reviews scroll
-var window_width = $(window).width();
-$(window).scroll(function () {
-    var scroll_position = $(window).scrollTop();
-    var lineOffset = $(".home-reviews").offset().top;
-    console.log(scroll_position);
-    console.log(lineOffset);
-    var object_position_left = -500 - (scroll_position - lineOffset);
-    var object_position_left2 = (-500 - (scroll_position - lineOffset)) * 1.2;
-    $(".home-reviews__line1").css({ left: object_position_left2 });
-    $(".home-reviews__line2").css({ left: object_position_left });
-});
+if ($(".home-reviews").length != 0) {
+    var window_width = $(window).width();
+    $(window).scroll(function () {
+        var scroll_position = $(window).scrollTop();
+        var lineOffset = $(".home-reviews").offset().top;
+        console.log(scroll_position);
+        console.log(lineOffset);
+        var object_position_left = -500 - (scroll_position - lineOffset);
+        var object_position_left2 = (-500 - (scroll_position - lineOffset)) * 1.2;
+        $(".home-reviews__line1").css({ left: object_position_left2 });
+        $(".home-reviews__line2").css({ left: object_position_left });
+    });
+}
+
 
 //  home-videos slider
 $('.home-videos__slider').slick({
@@ -192,6 +195,28 @@ $('.service-team__slider').slick({
     nextArrow: '.home-blog__next',
     prevArrow: '.home-blog__prev',
     slide: '.service-team__block',
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                infinite: true
+            }
+
+        }
+    ]
+});
+
+// cooperation serts
+$('.cooperation-serts__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    infinite: false,
+    dots: false,
+    nextArrow: '.cooperation-serts__slider .next',
+    prevArrow: '.cooperation-serts__slider .prev',
+    slide: 'img',
     responsive: [
         {
             breakpoint: 768,

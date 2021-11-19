@@ -140,6 +140,14 @@
                 color: #6F73EE
     input:checked + .checkbox__box
         background: #FFFFFF url('../img/checkbox.svg') center no-repeat
+    &_white
+        .checkbox__text
+            color: #FFFFFF
+            a
+                color: #FFFFFF
+                &:hover
+                    color: #FFFFFF
+                    opacity: 0.8
 @media(max-width: 1199px)
     .page-top
         &__title
@@ -154,3 +162,28 @@
             font-size: 22px
             line-height: normal
             padding-left: 0
+input:focus
+    outline: none
+.arrow
+    background: #fff
+    width: 42px
+    height: 42px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    cursor: pointer
+    transition: all 0.3s
+    position: absolute
+    top: 50%
+    margin-top: -21px
+    path
+        transition: all 0.3s
+    &:hover
+        background: #6F73EE
+        path
+            fill: #fff
+.prev
+    left: 20px
+.next
+    right: 20px
