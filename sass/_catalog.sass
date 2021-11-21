@@ -198,5 +198,393 @@
         .card__arrow
             display: flex
 .catalog
+    padding-top: 50px
+    padding-bottom: 100px
     &-stock
         margin-top: 30px
+    &__wrap
+        display: flex
+        justify-content: space-between
+        grid-gap: 30px
+    &__aside
+        width: 255px
+        &-title
+            padding-top: 3px
+            padding-bottom: 30px
+            font-weight: 600
+            font-size: 25px
+            line-height: 36px
+            text-transform: uppercase
+            color: #282739
+        &-close
+            display: none
+            position: absolute
+            top: 0
+            right: 0
+    &__main
+        width: calc(100% - 285px)
+    &__top
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        font-weight: 500
+        font-size: 14px
+        line-height: 20px
+        color: #282739
+        padding-bottom: 32px
+        &-open
+            display: none
+            cursor: pointer
+        select
+            font-family: Jost
+            margin-left: 20px
+            padding: 10px 20px
+            padding-right: 35px
+            font-size: 12px
+            line-height: 17px
+            color: #6F73EE
+            border: 1px solid #6F73EE
+            border-radius: 5px
+            appearance: none
+            &:focus
+                outline: none
+    &__select
+        position: relative
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            width: 9px
+            height: 6px
+            pointer-events: none
+            top: 16px
+            right: 13px
+            background: url('../img/catalog/drop.svg') center no-repeat
+    &__products
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 30px
+    &-cant
+        background: #F4F7FB
+        border-radius: 10px
+        padding: 30px
+        position: relative
+        min-height: 480px
+        &__title
+            font-weight: 600
+            font-size: 18px
+            line-height: 22px
+            margin-bottom: 10px
+            color: #282739
+        &__subtitle
+            font-size: 14px
+            line-height: 18px
+            margin-bottom: 15px
+            color: #282739
+        &__link
+            font-weight: 500
+            font-size: 14px
+            line-height: 20px
+            color: #6F73EE
+            text-decoration: none
+            img
+                margin-left: 8px
+                transition: all 0.3s
+            &:hover
+                color: darken(#6F73EE, 20)
+                img
+                    margin-left: 15px
+        &__img
+            width: 100%
+            position: absolute
+            bottom: 0
+            left: 0
+            text-align: center
+            display: flex
+        &__block
+            position: absolute
+            background: #FFFFFF
+            border: 2px solid #6F73EE
+            width: 50px
+            height: 50px
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 50%
+            overflow: hidden
+            img
+                max-width: 100%
+            &1
+                bottom: 246px
+                left: 50px
+            &2
+                bottom: 150px
+                right: 30px
+                background: #F0F1F5
+    &-month
+        margin: 20px 0
+        background: radial-gradient(102.16% 238.93% at -2.16% 100%, #FFCF71 0%, #F3A712 100%)
+        border-radius: 10px
+        &__top
+            padding: 17px 15px
+            border-bottom: 1px solid rgba(#FFFFFF, .2)
+            display: flex
+            align-items: center
+            font-weight: 500
+            font-size: 18px
+            line-height: 26px
+            color: #FFFFFF
+            img
+                margin-right: 9px
+        &__main
+            padding: 17px 15px
+            display: flex
+            align-items: center
+            text-decoration: none
+        &__img
+            width: 61px
+            height: 61px
+            background: #F0F1F5
+            border-radius: 5px
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 20px
+            img
+                max-width: 100%
+        &__cont
+            max-width: 140px
+            font-size: 16px
+            line-height: 23px
+            color: #FFFFFF
+            transition: all 0.3s
+            span
+                display: block
+                margin-top: 3px
+                font-weight: 500
+                font-size: 20px
+                line-height: 24px
+        &__main:hover
+            .catalog-month__cont
+                color: #6F73EE
+    &-manager
+        display: flex
+        background: radial-gradient(98.43% 294.85% at 0% 100%, #8FE865 0%, #49AC1B 100%), radial-gradient(93.73% 216.29% at 6.27% 90.21%, #FFCF71 0%, #F3A712 100%)
+        border-radius: 10px
+        text-decoration: none
+        &__img
+            display: flex
+        &__text
+            max-width: 120px
+            display: flex
+            font-weight: 500
+            font-size: 16px
+            line-height: 18px
+            color: #FFFFFF
+            align-items: center
+    &-filter
+        background: #F4F7FB
+        border-radius: 10px
+        padding: 20px
+        &__block
+            margin-bottom: 25px
+            display: none
+            &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4)
+                display: block
+            label
+                display: flex
+                align-items: center
+                position: relative
+                font-size: 14px
+                line-height: 20px
+                color: #282739
+                margin-bottom: 10px
+                span
+                    background: #FFFFFF
+                    border: 1px solid #5D6C7B
+                    box-sizing: border-box
+                    border-radius: 2px
+                    width: 16px
+                    height: 16px
+                    margin-right: 11px
+                input
+                    position: absolute
+                    top: 0
+                    left: 0
+                    margin: 0
+                    padding: 0
+                    opacity: 0
+                    height: 0
+                    width: 0
+                    overflow: hidden
+                    visibility: hidden
+                    &:checked + span
+                        border: 1px solid #FFFFFF
+                        background: #fff url(../img/checkbox.svg) center no-repeat
+        &__title
+            margin-bottom: 15px
+            font-weight: 500
+            font-size: 18px
+            line-height: 26px
+            color: #282739
+        &__ranges
+            &-inputs
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin-bottom: 24px
+                input
+                    padding: 8px
+                    width: 80px
+                    font-family: Jost
+                    font-size: 16px
+                    line-height: 19px
+                    color: #282739
+                    background: #FFFFFF
+                    border: 1px solid #EAEBED
+                    border-radius: 5px
+                    text-align: center
+            &-wrap
+                position: relative
+                padding: 15px 0
+                margin-bottom: 24px
+            .slider-track
+                border-radius: 3px
+                height: 2px
+            input[type=range]
+                -webkit-appearance: none
+                appearance: none
+                width: 100%
+                height: 5px
+                padding: 0
+                margin: 0
+                background: transparent
+                position: absolute
+                top: 13px
+                pointer-events: none
+                left: 0
+                width: 100%
+                border-radius: 30px
+                &:focus
+                    outline: none
+            input[type=range]::-moz-range-track
+                background: none
+                border: none
+            input[type=range]::-moz-range-thumb
+                -moz-appearance: none
+                width: 16px
+                height: 16px
+                background: #FFFFFF
+                border: 4px solid #6F73EE
+                border-radius: 50%
+                background-size: contain
+                position: relative
+                pointer-events: auto
+                z-index: 4
+            input[type=range]::-webkit-slider-thumb
+                -webkit-appearance: none
+                width: 16px
+                height: 16px
+                cursor: pointer
+                background: #FFFFFF
+                border: 4px solid #6F73EE
+                border-radius: 50%
+                position: relative
+                pointer-events: auto
+                z-index: 4
+        &__more
+            display: flex
+            justify-content: center
+            align-items: center
+            font-weight: 500
+            font-size: 14px
+            line-height: 20px
+            text-decoration: none
+            color: #6F73EE
+            span
+                margin-right: 6px
+                margin-bottom: 2px
+            &:hover
+                color: darken(#6F73EE, 20)
+            &.active
+                img
+                    transform: rotate(180deg)
+@media(max-width: 1199px)
+    .catalog
+        &__products
+            grid-template-columns: repeat(2, 1fr)
+            .card
+                margin: 0 auto
+        &-cant
+            width: 255px
+            margin: 0 auto
+@media(max-width: 991px)
+    .catalog
+        &__aside
+            width: 100vw
+            height: 100vh
+            position: fixed
+            top: 0
+            left: -100vw
+            background-color: #fff
+            transition: all 0.3s
+            padding: 20px
+            z-index: 10
+            overflow-y: scroll
+            &.active
+                left: 0
+            &-close
+                display: block
+                top: 26px
+                right: 20px
+                cursor: pointer
+        &__main
+            width: 100%
+        &__products
+            grid-template-columns: repeat(3, 1fr)
+            grid-gap: 30px 10px
+            .card
+                width: 240px
+        &-cant
+            width: 240px
+        &__top
+            position: relative
+            &-open
+                display: block
+                position: absolute
+                top: 0
+                left: 0
+                height: 39px
+                display: flex
+                align-items: center
+@media(max-width: 767px)
+    .catalog
+        &__products
+            grid-template-columns: repeat(2, 1fr)
+            .card
+                width: 255px
+@media(max-width: 575px)
+    .catalog
+        padding: 40px 0
+        &__products
+            display: block
+            .card
+                width: 100%
+                margin-bottom: 30px
+        &-cant
+            width: 100%
+            margin-bottom: 30px
+            &__img
+                justify-content: center
+        &__top
+            display: block
+            select
+                width: 100%
+                margin-left: 0
+        &__select
+            margin-top: 10px
+        &__top-open
+            right: 0
+            left: auto
+            height: auto
+            top: -0px

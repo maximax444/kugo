@@ -228,3 +228,78 @@ $('.cooperation-serts__slider').slick({
         }
     ]
 });
+
+// filter range 
+$(".inp1").on("change", function () {
+    let sliderOne = $(this).closest(".catalog-filter__ranges").find(".inp1").val();
+    let sliderTwo = $(this).closest(".catalog-filter__ranges").find(".inp2").val();
+    let sliderMaxValue = $(this).closest(".catalog-filter__ranges").find(".slider-1").attr('max');
+    let sliderTrack = $(this).closest(".catalog-filter__ranges").find(".slider-track");
+    percent1 = (sliderOne / sliderMaxValue) * 100;
+    percent2 = (sliderTwo / sliderMaxValue) * 100;
+    sliderTrack.css('background', `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`);
+    $(this).closest(".catalog-filter__ranges").find(".slider-1").val($(this).val());
+});
+$(".inp2").on("change", function () {
+    let sliderOne = $(this).closest(".catalog-filter__ranges").find(".inp1").val();
+    let sliderTwo = $(this).closest(".catalog-filter__ranges").find(".inp2").val();
+    let sliderMaxValue = $(this).closest(".catalog-filter__ranges").find(".slider-1").attr('max');
+    let sliderTrack = $(this).closest(".catalog-filter__ranges").find(".slider-track");
+    percent1 = (sliderOne / sliderMaxValue) * 100;
+    percent2 = (sliderTwo / sliderMaxValue) * 100;
+    sliderTrack.css('background', `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`);
+    $(this).closest(".catalog-filter__ranges").find(".slider-2").val($(this).val());
+});
+$(".slider-1").on("input", function () {
+    let sliderOne = $(this).val();
+    let sliderTwo = $(this).closest(".catalog-filter__ranges-wrap").find(".slider-2").val();
+    let sliderMaxValue = $(this).attr('max');
+    let sliderTrack = $(this).closest(".catalog-filter__ranges-wrap").find(".slider-track");
+    if ((parseInt(sliderTwo) - parseInt(sliderOne)) <= 0) {
+        $(this).val(parseInt(sliderTwo));
+        $(this).closest(".catalog-filter__ranges").find(".catalog-filter__ranges-inputs .inp1").val(sliderTwo);
+    } else {
+        $(this).closest(".catalog-filter__ranges").find(".catalog-filter__ranges-inputs .inp1").val(sliderOne);
+    }
+    percent1 = (sliderOne / sliderMaxValue) * 100;
+    percent2 = (sliderTwo / sliderMaxValue) * 100;
+    sliderTrack.css('background', `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`);
+});
+$(".slider-2").on("input", function () {
+    let sliderOne = $(this).closest(".catalog-filter__ranges-wrap").find(".slider-1").val();
+    let sliderTwo = $(this).val();
+    let sliderMaxValue = $(this).attr('max');
+    let sliderTrack = $(this).closest(".catalog-filter__ranges-wrap").find(".slider-track");
+    if ((parseInt(sliderTwo) - parseInt(sliderOne)) <= 0) {
+        $(this).val(parseInt(sliderOne));
+        $(this).closest(".catalog-filter__ranges").find(".catalog-filter__ranges-inputs .inp2").val(sliderOne);
+    } else {
+        $(this).closest(".catalog-filter__ranges").find(".catalog-filter__ranges-inputs .inp2").val(sliderTwo);
+    }
+
+    percent1 = (sliderOne / sliderMaxValue) * 100;
+    percent2 = (sliderTwo / sliderMaxValue) * 100;
+    sliderTrack.css('background', `linear-gradient(to right, #dadae5 ${percent1}% , #3264fe ${percent1}% , #3264fe ${percent2}%, #dadae5 ${percent2}%)`);
+});
+
+//filter hidden blocks
+$('.catalog-filter__more').on('click', function (e) {
+    e.preventDefault();
+    if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+        $('.catalog-filter__block').slice(4, 15).hide();
+        $(this).find('span').html('Показать весь фильтр');
+    } else {
+        $(this).addClass('active');
+        $('.catalog-filter__block').slice(4, 15).show();
+        $(this).find('span').html('Скрыть');
+    }
+});
+
+//filter show/hide (mobile)
+$('.catalog__top-open').on('click', function () {
+    $('.catalog__aside').addClass('active');
+});
+$('.catalog__aside-close').on('click', function () {
+    $('.catalog__aside').removeClass('active');
+});
