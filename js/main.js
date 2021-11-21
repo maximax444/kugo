@@ -303,3 +303,10 @@ $('.catalog__top-open').on('click', function () {
 $('.catalog__aside-close').on('click', function () {
     $('.catalog__aside').removeClass('active');
 });
+
+// about process tabs
+$('.about-process__tabs').on('click', 'button:not(.active)', function () {
+    $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('.about-process').find('.about-process__cont-block').removeClass('active').eq($(this).index()).addClass('active');
+});
