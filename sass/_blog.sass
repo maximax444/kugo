@@ -1,0 +1,166 @@
+.blog
+    padding-top: 50px
+    padding-bottom: 90px
+    &-nav
+        &__all
+            overflow: hidden
+            background: radial-gradient(58.73% 541.94% at 75.14% 62.23%, #A6A9FF 0%, #6F73EE 100%), #F4F7FB
+            border-radius: 10px
+        &__wrap
+            display: flex
+            align-items: center
+            justify-content: space-between
+            height: 200px
+        &__title
+            font-weight: 600
+            font-size: 35px
+            line-height: 51px
+            text-transform: uppercase
+            color: #FFFFFF
+        &__right
+            padding-right: 115px
+            display: flex
+            align-items: flex-start
+            padding-top: 20px
+            height: 100%
+        &__img
+            width: 295px
+            height: 85%
+            img
+                width: 100%
+                height: 100%
+        &__block
+            width: 206px
+            margin-top: 14px
+            position: relative
+            left: 26px
+            background: rgba(244, 247, 251, 0.1)
+            backdrop-filter: blur(3px)
+            border-radius: 6px
+            overflow: hidden
+            &-img
+                height: 110px
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+            &-text
+                padding: 11px
+                font-size: 8.24658px
+                line-height: 12px
+                color: #FFFFFF
+                span
+                    display: block
+                    margin-bottom: 6px
+                    font-weight: 500
+                    font-size: 12px
+                    line-height: 14px
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 54px
+    &__cats
+        display: flex
+        align-items: center
+        grid-gap: 10px
+        a
+            padding: 10px 20px
+            background: #F4F7FB
+            border-radius: 5px
+            font-size: 12px
+            line-height: 17px
+            color: #5D6C7B
+            border: 1px solid #F4F7FB
+            text-decoration: none
+            &.disabled
+                pointer-events: none
+            &:hover, &.disabled
+                border: 1px solid #6F73EE
+                color: #6F73EE
+                background-color: transparent
+    &__soc
+        display: flex
+        align-items: center
+        grid-gap: 10px
+        a
+            width: 37px
+            height: 37px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid #EAEBED
+            border-radius: 5px
+            &:hover
+                border: 1px solid #6F73EE
+    &__wrap
+        display: grid
+        grid-gap: 30px
+        grid-template-columns: repeat(3, 1fr)
+    &__block
+        margin-right: 0
+@media(max-width: 991px)
+    .blog
+        &-nav
+            &__right
+                padding-right: 0
+        &__wrap
+            grid-template-columns: repeat(2, 1fr)
+@media(max-width: 767px)
+    .blog
+        &-nav
+            &__block
+                position: absolute
+                left: -10px
+            &__right
+                position: relative
+                padding-right: 5px
+        &__top
+            display: block
+        &__soc
+            padding-top: 15px
+        &__wrap
+            grid-gap: 20px 15px
+@media(max-width: 575px)
+    .blog
+        padding: 40px 0
+        &-nav
+            &__wrap
+                display: block
+                height: 170px
+            &__all
+                padding: 20px 0
+            &__title
+                line-height: normal
+                font-size: 22px
+            &__img
+                width: 100%
+                width: 200px
+                height: 100px
+                position: relative
+                left: -10px
+                margin-right: 0
+                margin-left: auto
+            &__right
+                padding-top: 10px
+                padding-right: 0
+                width: 100%
+            &__block
+                width: 170px
+                z-index: 2
+                left: 0
+        &__cats
+            grid-gap: 5px
+            overflow-x: scroll
+            padding-bottom: 10px
+            a
+                padding: 6px 10px
+        &__soc
+            padding-top: 10px
+            a
+                width: 32px
+                height: 32px
+        &__top
+            margin-bottom: 40px
+        &__wrap
+            grid-template-columns: repeat(1, 1fr )
