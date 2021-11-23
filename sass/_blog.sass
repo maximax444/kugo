@@ -99,6 +99,131 @@
         grid-template-columns: repeat(3, 1fr)
     &__block
         margin-right: 0
+.article
+    &-soc
+        padding: 0
+    &__text
+        padding: 50px 0
+        width: 600px
+        max-width: 95%
+        margin: 0 auto
+        p
+            margin-top: 0
+            font-size: 20px
+            line-height: 29px
+            color: #282739
+            margin-bottom: 30px
+            a
+                color: #6F73EE
+                text-decoration: none
+                &:hover
+                    color: darken(#6F73EE, 20)
+        h2
+            margin-bottom: 18px
+            margin-top: 0
+            font-weight: 600
+            font-size: 24px
+            line-height: 30px
+            font-feature-settings: 'pnum' on, 'lnum' on
+            color: #282739
+            padding-top: 20px
+        a.btn
+            margin-bottom: 50px
+    &__slider
+        position: relative
+    &__block
+        img
+            max-width: 100%
+            border-radius: 10px
+    &-top
+        position: relative
+        &__img
+            height: 400px
+            border-radius: 10px
+            overflow: hidden
+            position: relative
+            &::after
+                content: ""
+                position: absolute
+                bottom: 0
+                left: 0
+                height: 260px
+                width: 100%
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+                opacity: 0.4
+                border-radius: 10px
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+        &__cont
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 2
+        &__wrap
+            width: 600px
+            max-width: 95%
+            margin: 0 auto
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            position: relative
+        &__title
+            padding-bottom: 36px
+            padding-top: 17px
+            margin: 0
+            font-weight: 600
+            font-size: 35px
+            line-height: 50px
+            text-transform: uppercase
+            color: #FFFFFF
+        &__info
+            display: flex
+            align-items: center
+            grid-gap: 20px
+        &__date
+            font-weight: 500
+            font-size: 12px
+            line-height: 17px
+            color: #FFFFFF
+        &__grey
+            display: flex
+            align-items: center
+            grid-gap: 15px
+            span
+                display: flex
+                align-items: center
+                font-weight: 500
+                font-size: 12px
+                line-height: 17px
+                color: #FFFFFF
+                opacity: 0.5
+                img
+                    margin-right: 8px
+                    margin-bottom: 2px
+        &__soc
+            position: absolute
+            top: 26px
+            left: 0
+            display: flex
+            grid-gap: 10px
+            align-items: center
+            a
+                width: 37px
+                height: 37px
+                display: flex
+                justify-content: center
+                align-items: center
+                background: rgba(255, 255, 255, 0.1)
+                backdrop-filter: blur(20px)
+                border-radius: 5px
+                border: 1px solid transparent
+                &:hover
+                    border: 1px solid #6F73EE
 @media(max-width: 991px)
     .blog
         &-nav
@@ -164,3 +289,29 @@
             margin-bottom: 40px
         &__wrap
             grid-template-columns: repeat(1, 1fr )
+    .article
+        &-top
+            &__soc
+                top: 15px
+            &__title
+                padding: 15px 0
+                font-size: 22px
+                line-height: normal
+            &__img
+                height: 220px
+        &__text
+            padding: 30px 0
+            p
+                font-size: 14px
+                line-height: normal
+                margin-bottom: 15px
+            h2
+                font-size: 18px
+                line-height: normal
+                margin-bottom: 15px
+                padding-top: 10px
+            a.btn
+                width: 100%
+                padding: 8px 10px
+                text-align: center
+                margin-bottom: 20px

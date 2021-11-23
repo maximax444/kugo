@@ -339,6 +339,18 @@ $('.product-info__tabs').on('click', 'button:not(.active)', function () {
         .closest('.product-info').find('.product-info__cont-block').removeClass('active').eq($(this).index()).addClass('active');
 });
 
+// article slider
+$('.article__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    infinite: true,
+    dots: false,
+    adaptiveHeight: true,
+    slide: '.article__block',
+    prevArrow: '.prev',
+    nextArrow: '.next'
+});
 
 
 
