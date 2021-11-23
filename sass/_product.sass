@@ -354,6 +354,7 @@
         background: #F4F7FB
         border-radius: 10px
         padding: 30px
+        margin-top: 30px
         &-top
             display: flex
             justify-content: space-between
@@ -396,12 +397,223 @@
             color: #6F73EE
             &:hover
                 color: darken(#6F73EE, 20)
+    &-options
+        &__title
+            font-weight: 500
+            font-size: 16px
+            line-height: 23px
+            display: flex
+            align-items: center
+            color: #282739
+            margin-bottom: 20px
+            margin-top: 30px
+        &__block
+            position: relative
+        &__color
+            width: 45px
+            height: 45px
+            margin: 0 auto
+            margin-bottom: 11px
+            border-radius: 50%
+        &__drop
+            margin-left: 6px
+            position: relative
+            &-title
+                display: flex
+            &-cont
+                width: 230px
+                background: #FFFFFF
+                border-radius: 5px
+                padding: 20px
+                font-weight: normal
+                font-size: 14px
+                line-height: 20px
+                color: #000000
+                filter: drop-shadow(0px 10px 30px rgba(111, 115, 238, 0.15))
+                position: absolute
+                left: -32px
+                bottom: calc(100% + 15px)
+                z-index: 2
+                display: none
+                &::before
+                    content: ""
+                    width: 20px
+                    height: 20px
+                    border-radius: 2px
+                    transform: rotate(45deg)
+                    bottom: -10px
+                    left: 30px
+                    position: absolute
+                    background-color: #fff
+            &:hover
+                .product-options__drop-cont
+                    display: block
+        &__wrap
+            padding: 30px 0
+            padding-top: 0px
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 20px
+            border-bottom: 1px solid #EAEBED
+        &__name
+            text-align: center
+            .product-options__drop
+                display: inline-block
+                position: relative
+                top: 2px
+                left: -3px
+        &__price
+            font-size: 14px
+            line-height: 20px
+            color: #5D6C7B
+        &__cont
+            padding: 30px 15px
+            border: 2px solid #EAEBED
+            border-radius: 10px
+            font-size: 18px
+            line-height: 26px
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            color: #282739
+            transition: all 0.3s
+            &:hover
+                border: 2px solid #6F73EE
+        label
+            position: relative
+            input
+                height: 0
+                width: 0
+                overflow: hidden
+                opacity: 0
+                position: absolute
+                top: 0
+                left: 0
+                margin: 0
+                padding: 0
+                border: 0
+                &:checked + .product-options__cont
+                    border: 2px solid #6F73EE
+        &__end
+            display: none
+            align-items: center
+            justify-content: space-between
+            padding: 20px 0
+            border-bottom: 1px solid #EAEBED
+            &-top
+                font-size: 14px
+                line-height: 20px
+                color: #5D6C7B
+            &-subtitle
+                font-weight: normal
+                font-size: 14px
+                line-height: 20px
+                color: #282739
+            &-main
+                margin: 8px 0
+                font-weight: 500
+                font-size: 20px
+                line-height: 24px
+                color: #282739
+            &-price
+                font-weight: 500
+                font-size: 14px
+                line-height: 20px
+                color: #282739
+            &-change
+                font-size: 14px
+                line-height: 20px
+                color: #6F73EE
+                text-decoration: none
+                &:hover
+                    color: darken(#6F73EE, 20)
+        &__block.active
+            .product-options
+                &__end
+                    display: flex
+                &__wrap, &__title, &__prize, &__time
+                    display: none
+        &__time
+            position: absolute
+            top: -1px
+            right: 0
+            font-size: 14px
+            line-height: 20px
+            color: #5D6C7B
+            display: flex
+            align-items: center
+            span
+                font-weight: 500
+                font-size: 16px
+                line-height: 23px
+                color: #282739
+                padding-left: 8px
+                padding-top: 1px
+        &__prize
+            padding: 20px
+            margin-bottom: 20px
+            background: #F4F7FB
+            border-radius: 10px
+            &-title
+                font-weight: 500
+                font-size: 18px
+                line-height: 26px
+                color: #282739
+                margin-bottom: 23px
+            &-wrap
+                display: flex
+                grid-gap: 20px
+            &-block
+                display: flex
+                align-items: center
+                &:nth-child(2)
+                    .product-options__prize-text
+                        max-width: 100px
+            &-img
+                width: 46px
+                height: 46px
+                margin-right: 18px
+                background: #6F73EE
+                border-radius: 5px
+                display: flex
+                align-items: flex-end
+                justify-content: center
+            &-text
+                font-size: 12px
+                line-height: 15px
+                max-width: 165px
+                color: #282739
 @media(max-width: 1199px)
     .product
         &-list
             &__slider
                 .card
                     margin-right: 5px
+@media(max-width: 991px)
+    .product
+        &__wrap
+            display: block
+        &__left
+            max-width: 100%
+        &-info
+            &__wrap
+                grid-gap: 30px
+            &__wrap2
+                grid-template-columns: repeat(1,1fr )
+                grid-gap: 0
+@media(max-width: 767px)
+    .product
+        &-info
+            &__wrap
+                display: block
+            &__grid
+                grid-template-columns: repeat(2, 1fr)
+            &__tabs
+                button
+                    white-space: nowrap
+                    font-size: 13px
 @media(max-width: 575px)
     .product
         &-list
@@ -413,3 +625,110 @@
                 font-size: 22px
                 line-height: normal
                 margin-bottom: 15px
+        &__gallery
+            grid-template-columns: repeat(5, 1fr)
+            &-block
+                height: 50px
+        &__img
+            height: 260px
+        &__cont
+            padding-top: 30px
+            max-width: 100%
+        &__title
+            font-size: 22px
+            line-height: normal
+        &__grey
+            display: block
+            span
+                display: block
+        &__has
+            width: 100%
+        &__buttons
+            flex-wrap: wrap
+            grid-gap: 5px 10px
+            justify-content: center
+        &__main
+            display: block
+        &__price
+            margin-bottom: 10px
+        &-options
+            &__cont
+                font-size: 14px
+                line-height: normal
+                padding: 15px 10px
+            &__wrap
+                grid-gap: 10px
+            &__end
+                &-main
+                    font-size: 16px
+                    padding-right: 5px
+                    line-height: normal
+                &-subtitle
+                    font-size: 11px
+                    line-height: normal
+            &__time
+                position: static
+                margin-bottom: 10px
+            &__prize
+                padding: 10px
+                &-wrap
+                    display: block
+                &-block
+                    margin-bottom: 10px
+        &__end
+            padding: 15px
+            &-price
+                font-size: 22px
+                line-height: normal
+            &-top
+                padding-bottom: 15px
+            &-btns
+                .btn
+                    padding: 8px 10px
+                    font-size: 12px
+        &-info
+            padding: 40px 0
+            &__tabs
+                justify-content: flex-start
+                overflow-x: scroll
+            &__cont
+                &-block.active
+                    padding-top: 20px
+            &__title
+                font-size: 20px
+                line-height: normal
+            &__compl
+                padding-bottom: 10px
+            &__spec
+                grid-gap: 5px
+                span
+                    font-size: 12px
+                    padding: 8px 10px
+            &__row
+                height: auto
+                padding: 10px 0
+            &__list
+                margin-bottom: 10px
+            &__grid
+                grid-template-columns: repeat(1, 1fr )
+                grid-gap: 15px
+                margin-bottom: 15px
+            &__banner
+                padding: 15px
+                padding-bottom: 100px
+                &::after
+                    width: 200px
+                    height: 200px
+                    top: auto
+                    bottom: -100px
+                    right: -100px
+                &-img
+                    height: 100px
+                    width: 100px
+                    top: auto
+                    bottom: 0
+                    display: flex
+                    align-items: flex-end
+                    justify-content: flex-end
+                    img
+                        max-width: 100%
