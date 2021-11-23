@@ -106,6 +106,27 @@
         height: 100%
         display: flex
         align-items: center
+    &__top
+        margin-bottom: 11px
+        display: flex
+        align-items: center
+        grid-gap: 10px
+    &__red
+        padding: 4px 8px
+        background: #EE685F
+        border-radius: 5px
+        font-size: 14px
+        line-height: 20px
+        text-align: center
+        color: #FFFFFF
+    &__green
+        padding: 4px 8px
+        background: #75D14A
+        border-radius: 5px
+        font-size: 14px
+        line-height: 20px
+        text-align: center
+        color: #FFFFFF
     &__title
         margin: 0
         font-weight: 600
@@ -154,18 +175,49 @@
                 &:hover
                     color: #FFFFFF
                     opacity: 0.8
+.pagination
+    padding-top: 40px
+    display: flex
+    justify-content: center
+    grid-gap: 8px
+    a
+        text-decoration: none
+        width: 32px
+        height: 32px
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 1px solid #EAEBED
+        border-radius: 2px
+        font-size: 14px
+        line-height: 22px
+        color: #282739
+        &.active, &:hover
+            border: 1px solid #6F73EE
+            color: #6F73EE
+        &.disabled
+            pointer-events: none
+            background: #F4F7FB
+            border: 1px solid #F4F7FB
 @media(max-width: 1199px)
     .page-top
         &__title
             padding-left: 15px
+@media(max-width: 767px)
+    .page-top
+        &__title
+            font-size: 26px
+            line-height: normal
+            br
+                display: none
 @media(max-width: 575px)
     .page-top
         &__img
-            height: 100px
+            height: 140px
             &::after
                 background: linear-gradient(88.23deg, #6F73EE 34.95%, rgba(111, 115, 238, 0) 89.45%)
         &__title
-            font-size: 22px
+            font-size: 20px
             line-height: normal
             padding-left: 0
 input:focus
