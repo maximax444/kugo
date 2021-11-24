@@ -1,0 +1,257 @@
+.contacts
+    padding-top: 50px
+    padding-bottom: 100px
+    &-info
+        &__all
+            padding: 45px 0
+            background: #F4F7FB
+            border-radius: 10px
+        &__wrap
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            grid-gap: 55px
+        &__text
+            margin-top: 0
+            font-size: 14px
+            line-height: 20px
+            color: #000000
+        &__mail
+            display: flex
+            align-items: center
+            font-weight: 500
+            font-size: 16px
+            line-height: 22px
+            text-decoration: none
+            color: #282739
+            margin-bottom: 20px
+            img
+                margin-right: 15px
+                margin-top: 1px
+            &:hover
+                color: #6F73EE
+        &__title
+            font-weight: 600
+            font-size: 18px
+            line-height: 26px
+            text-transform: uppercase
+            color: #282739
+            height: 52px
+            margin-bottom: 27px
+        &__tel
+            display: flex
+            align-items: flex-start
+            margin-bottom: 20px
+            img
+                margin-right: 15px
+            &-text
+                width: calc(100% - 33px)
+            span
+                font-size: 14px
+                line-height: 20px
+                color: #5D6C7B
+            &-phone
+                display: block
+                font-weight: 500
+                font-size: 16px
+                line-height: 23px
+                color: #282739
+                text-decoration: none
+                &:hover
+                    color: #6F73EE
+            &-down
+                display: block
+                font-size: 12px
+                line-height: 17px
+                color: #6F73EE
+                margin-top: 12px
+                text-decoration: none
+                &:hover
+                    color: darken(#6F73EE, 20)
+        &__btn
+            margin-top: 7px
+    &__tabs
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 50px
+        grid-gap: 20px
+        button
+            padding: 15px 25px
+            background: #F4F7FB
+            border-radius: 5px
+            font-size: 16px
+            line-height: 23px
+            color: #5D6C7B
+            border: 1px solid #F4F7FB
+            cursor: pointer
+            &:hover, &.active
+                color: #6F73EE
+                border: 1px solid #6F73EE
+                background-color: #fff
+    &__main
+        padding-top: 20px
+        width: calc(50% - 75px)
+    &__name
+        margin-bottom: 30px
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+        color: #282739
+    &__left
+        width: 38px
+        margin-right: 20px
+        background: #F4F7FB
+        border-radius: 5px
+        display: flex
+        justify-content: center
+        align-items: center
+    &__wrap
+        display: flex
+        justify-content: space-between
+    &-adress
+        display: flex
+        margin-bottom: 30px
+        &__name
+            font-size: 18px
+            line-height: 26px
+            color: #282739
+            margin-bottom: 5px
+            a
+                font-size: 14px
+                line-height: 20px
+                color: #6F73EE
+                padding-left: 15px
+                text-decoration: none
+                &:hover
+                    color: darken(#6F73EE, 20)
+        &__small
+            margin-top: 3px
+            font-size: 14px
+            line-height: 20px
+            color: #5D6C7B
+    &-tel
+        display: flex
+        margin-bottom: 30px
+        &__wrap
+            display: flex
+            grid-gap: 30px
+        &__block
+            font-size: 14px
+            line-height: 20px
+            color: #5D6C7B
+            a
+                display: block
+                margin-top: 4px
+                font-size: 18px
+                line-height: 26px
+                color: #282739
+                text-decoration: none
+                &:hover
+                    color: darken(#6F73EE, 20)
+    &-text
+        display: flex
+        p
+            padding-top: 7px
+            padding-bottom: 13px
+            margin: 0
+            font-size: 14px
+            line-height: 20px
+            color: #282739
+            b
+                font-weight: 500
+    &__block
+        width: calc(100% - 58px)
+    &__map
+        filter: invert(100%)
+        opacity: 0.8
+        width: calc((50% - 75px) + (100vw - 1110px)/2 - 30px)
+        margin-right: calc(((100vw - 1110px)/2 - 30px) * (-1))
+        iframe
+            width: 100%
+            height: 480px
+    &__cont
+        &-block
+            display: none
+            &.active
+                display: block
+@media(max-width: 1199px)
+    .contacts
+        &__main
+            width: calc(50% - 15px)
+        &__map
+            width: calc((50% - 15px) + (100vw - 980px)/2 - 30px)
+            margin-right: calc(((100vw - 980px)/2 - 30px) * (-1))
+@media(max-width: 991px)
+    .contacts
+        &__wrap
+            display: block
+        &__main
+            width: 100%
+        &__map
+            margin-right: 0
+            width: 100%
+            padding-top: 20px
+        &-info
+            &__wrap
+                grid-template-columns: repeat(2, 1fr)
+            &__title
+                height: auto
+                margin-bottom: 15px
+        &__tabs
+            grid-gap: 10px
+            margin-bottom: 25px
+            button
+                font-size: 14px
+                padding: 8px 12px
+@media(max-width: 767px)
+    .contacts
+        &__tabs
+            justify-content: flex-start
+            overflow-x: scroll
+            padding-bottom: 10px
+            margin-bottom: 15px
+            button
+                white-space: nowrap
+@media(max-width: 575px)
+    .contacts
+        padding: 40px 0
+        &-info
+            &__wrap
+                display: block
+            &__all
+                padding: 40px 0
+                padding-bottom: 10px
+            &__col
+                margin-bottom: 30px
+        &-text
+            p
+                font-size: 12px
+                line-height: normal
+                padding: 5px 0
+        &-tel
+            margin-bottom: 15px
+            &__block
+                font-size: 12px
+                line-height: normal
+            &__wrap
+                grid-gap: 10px
+            a
+                font-size: 13px
+                line-height: normal
+                margin-top: 0
+        &-adress
+            margin-bottom: 15px
+            &__name
+                font-size: 14px
+                a
+                    display: block
+                    padding-left: 0
+            &__small
+                font-size: 12px
+                line-height: normal
+        &__name
+            font-size: 16px
+            line-height: normal
+        &__map
+            iframe
+                height: 240px

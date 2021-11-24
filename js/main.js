@@ -364,6 +364,13 @@ $('.article__slider').slick({
     nextArrow: '.next'
 });
 
+// contacts tabs
+$('.contacts__tabs').on('click', 'button:not(.active)', function () {
+    $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('.contacts').find('.contacts__cont-block').removeClass('active').eq($(this).index()).addClass('active');
+});
+
 
 
 
