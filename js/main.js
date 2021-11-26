@@ -371,6 +371,12 @@ $('.contacts__tabs').on('click', 'button:not(.active)', function () {
         .closest('.contacts').find('.contacts__cont-block').removeClass('active').eq($(this).index()).addClass('active');
 });
 
+// delivery tabs
+$('.delivery__tabs').on('click', 'button:not(.active)', function () {
+    $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('.delivery').find('.delivery__cont-block').removeClass('active').eq($(this).index()).addClass('active');
+});
 
 
 
