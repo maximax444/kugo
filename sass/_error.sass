@@ -1,0 +1,78 @@
+.error
+    padding-bottom: 30px
+    &__all
+        background: #3B3E46 url('/img/error.jpg') center right no-repeat
+        border-radius: 10px
+        background-size: 60%
+        overflow: hidden
+    &__wrap
+        height: 420px
+        padding-left: 85px
+        padding-top: 72px
+        max-width: 385px
+        position: relative
+        z-index: 2
+        &::after
+            content: ""
+            display: block
+            position: absolute
+            top: -700px
+            left: 0
+            width: 200%
+            height: 1820px
+            background: #3B3E46
+            filter: blur(180px)
+            z-index: -1
+    &__title
+        font-weight: 600
+        font-size: 35px
+        line-height: 51px
+        text-transform: uppercase
+        margin-bottom: 14px
+        margin-top: 0
+        color: #FFFFFF
+    &__text
+        margin-bottom: 22px
+        font-size: 14px
+        line-height: 20px
+        color: #FFFFFF
+    &__inst
+        display: inline-block
+        margin-bottom: 9px
+        background: linear-gradient(0deg, #FFFFFF, #FFFFFF)
+        border: 1px solid #FFFFFF
+        padding: 15px 25px
+        border-radius: 5px
+        font-size: 16px
+        line-height: 23px
+        color: #282739
+        text-decoration: none
+        &:hover
+            color: #fff
+            background: transparent
+    &__small
+        font-size: 12px
+        line-height: 17px
+        max-width: 195px
+        color: #FFFFFF
+        opacity: 0.7
+        a
+            color: #FFFFFF
+            text-decoration: none
+@media(max-width: 1599px)
+    .error
+        &__all
+            background-size: auto 100%
+        &__wrap
+            padding-left: 0
+            &::after
+                left: -200px
+                width: 250%
+@media(max-width: 991px)
+    .error
+        &__all
+            background-size: cover
+            background-position: center center
+        &__wrap
+            &::after
+                filter: blur(280px)
