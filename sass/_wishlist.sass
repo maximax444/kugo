@@ -1,3 +1,22 @@
 .wishlist
+    padding-bottom: 50px
     &-plan
         padding-bottom: 30px
+    &__title
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+        color: #282739
+        margin-bottom: 30px
+    &__wrap
+        padding-bottom: 50px
+@media(max-width: 575px)
+    .wishlist
+        padding-bottom: 10px
+        &__title
+            margin-bottom: 20px
+        &__wrap
+            padding-bottom: 40px
+            grid-gap: 20px
+            .card
+                width: 100%
