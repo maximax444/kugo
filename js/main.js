@@ -398,3 +398,46 @@ $('.card__prev').on('click', function (e) {
     e.preventDefault();
     $(this).closest('.card__img').slick('prev');
 });
+
+//cart logic
+$('.cart-end__btn').on('click', function (e) {
+    e.preventDefault();
+    if ($(this).next('label').find('input').is(':checked')) {
+        location = $(this).attr('href');
+    } else {
+        $(this).next('label').find('.checkbox__text').css('color', 'red');
+    }
+});
+$('.checkout-end__btn').on('click', function (e) {
+    if ($(this).next('label').find('input').is(':checked')) {
+    } else {
+        e.preventDefault();
+        $(this).next('label').find('.checkbox__text').css('color', 'red');
+    }
+});
+$('.cart').find('.checkbox').find('input').on('change', function () {
+    $(this).closest('.checkbox').find('.checkbox__text').css('color', '#282739');
+});
+$('.cart-options__title').on('click', function () {
+    $(this).next('.cart-options__drop').toggleClass('active');
+    $('.cart-options__title').not($(this)).next('.cart-options__drop').removeClass('active');
+});
+$('.cart-options__drop span').on('click', function () {
+    $(this).closest('.cart-options__block').find('.cart-options__drop').removeClass('active');
+    $(this).closest('.cart-options__block').find('.cart-options__title span').html($(this).html());
+    $(this).closest('.cart-options__block').find('input').val($(this).html());
+});
+$('.cart-info__count-minus').click(function () {
+    var $input = $(this).closest('.cart-info__count').find('input');
+    var count = parseInt($input.val()) - 1;
+    count = count < 1 ? 1 : count;
+    $input.val(count);
+    $input.change();
+    return false;
+});
+$('.cart-info__count-plus').click(function () {
+    var $input = $(this).closest('.cart-info__count').find('input');
+    $input.val(parseInt($input.val()) + 1);
+    $input.change();
+    return false;
+});
