@@ -1,0 +1,102 @@
+.thx
+    padding-bottom: 30px
+    &__all
+        background: radial-gradient(82.68% 234.06% at 85.58% 87.89%, #9DF474 0%, #75D14A 100%)
+        border-radius: 10px
+        padding-top: 40px
+    &__wrap
+        padding-right: 130px
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__img
+        display: flex
+        align-items: flex-end
+    &__cont
+        padding-bottom: 60px
+        padding-top: 20px
+    &__title
+        max-width: 500px
+        font-weight: 600
+        font-size: 35px
+        line-height: 51px
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-top: 0
+        margin-bottom: 13px
+    &__text
+        max-width: 460px
+        font-size: 14px
+        line-height: 20px
+        color: #FFFFFF
+        margin-top: 0
+        margin-bottom: 30px
+    &__link
+        background: #FFFFFF
+        border: 1px solid #FFFFFF
+        display: inline-block
+        padding: 15px 25px
+        border-radius: 5px
+        font-size: 16px
+        line-height: 23px
+        text-align: center
+        color: #75D14A
+        text-decoration: none
+        &:hover
+            color: #fff
+            background: transparent
+    &__list
+        display: flex
+        padding: 0
+        margin: 0
+        grid-gap: 35px
+        list-style-type: none
+        margin-bottom: 35px
+        li
+            max-width: 170px
+            font-weight: 500
+            font-size: 12px
+            line-height: 15px
+            color: #FFFFFF
+            padding-left: 30px
+            position: relative
+            &::before
+                content: ""
+                width: 20px
+                height: 20px
+                display: block
+                position: absolute
+                left: 0
+                top: 50%
+                margin-top: -10px
+                background: url('../img/cooperation/list-white.svg') center no-repeat
+@media(max-width: 991px)
+    .thx
+        &__wrap
+            padding-right: 0
+            align-items: flex-end
+        &__list
+            display: block
+            li
+                max-width: 100%
+                margin-bottom: 15px
+@media(max-width: 767px)
+    .thx
+        &__wrap
+            display: block
+        &__img
+            justify-content: center
+            img
+                max-width: 80%
+@media(max-width: 575px)
+    .thx
+        &__all
+            padding-top: 0
+        &__cont
+            padding: 30px 0
+        &__title
+            font-size: 22px
+            line-height: normal
+            margin-bottom: 20px
+        &__link
+            width: 100%
